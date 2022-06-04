@@ -206,7 +206,7 @@ array_unshift($arr, 'value'); // Removes and returns the first element from the 
 
 
 // Finding element
-in_array("value", $arr) // Returns true if value is present in $arr.
+in_array("value", $arr); // Returns true if value is present in $arr.
 array_keys($arr); // Returns all the keys in an associative array.
 array_values($arr); // Returns all the values in an associative array.
 array_key_exists($arr); // Returns true if key is present in $arr.
@@ -291,10 +291,10 @@ echo $_SESSION['user'];
 session_destroy();
 
 // Session Methods
-session_id($id) // Get and/or set the current session id
-session_unset() // Free all the session data.
-session_name($name) // Get and/or set the current session name
-session_status() // Returns the current status of the session.
+session_id($id); // Get and/or set the current session id
+session_unset(); // Free all the session data.
+session_name($name); // Get and/or set the current session name
+session_status(); // Returns the current status of the session.
 
 ```
 
