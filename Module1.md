@@ -1,4 +1,4 @@
-# # Internet and Web Programming (ITA6003)
+# Internet and Web Programming (ITA6003)
 ## Module 1 : Basics of Internet
 - [x] Internet working
 - [x] How HTTP Works

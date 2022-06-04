@@ -1,4 +1,4 @@
-# # Internet and Web Programming (ITA6003)
+# Internet and Web Programming (ITA6003)
 ## Module 2 : HTML and Static Webpages
 - [x] HTML Structure
 - [x] Legacy HTML Tags
