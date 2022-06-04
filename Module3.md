@@ -9,14 +9,14 @@
 - [x] If else
 - [x] Switch
 - [x] Loops
-- [ ] Functions
-- [ ] Objects
-- [ ] Arrays
-- [ ] Array Methods
-- [ ] Strings
-- [ ] Strings Methods
-- [ ] Date
-- [ ] Date Methods
+- [x] Functions
+- [x] Objects
+- [x] Arrays
+- [x] Array Methods
+- [x] Strings
+- [x] Strings Methods
+- [x] Date
+- [x] Date Methods
 
 ## Introduction to JS
 
@@ -124,7 +124,6 @@ for (key in object) {
 
 // For of loop
 for (let item of arr) {
-
 }
 
 // While loop
@@ -220,7 +219,7 @@ arr.push(..items);              // Adds values at the end of the array.
 arr.pop();                      // Remove value at the end of the array.
 arr.shift();                    // Remove the value at the start of the array.
 arr.unshift(..items);           // Add the value at the start of the array.
-arr.splice(start, n, ..items);  // From start, remove n elements and replace them with ..items. 
+arr.splice(start, n, ..items);  // From start, remove n elements and replace them with ..items.
 arr.concat([arr2]);             // Concatenate the arr2 at the end of arr.
 
 
@@ -276,45 +275,38 @@ let str = "this is a string";
 
 // Get the char at index
 
-console.log(str[0]); 
+console.log(str[0]);
 console.log(str.charAt(0));
 
-
 // Iterate over each character in the array
-for(char of str) {
-    console.log(char)
+for (char of str) {
+  console.log(char);
 }
-
 
 // Changing the case
 
 console.log(str.toLowerCase());
 console.log(str.toUpperCase());
 
-
 // Find elements
 
-console.log(str.indexOf('is'));     // 2
-console.log(str.includes('is'));    // True
-console.log(str.startsWith('T'))    // False 
-console.log(str.endsWith('g'))      // True
-
+console.log(str.indexOf("is")); // 2
+console.log(str.includes("is")); // True
+console.log(str.startsWith("T")); // False
+console.log(str.endsWith("g")); // True
 
 // Substrings
 
-console.log(str.slice(0, 5));       // 'this '
-console.log(str.substring(2,4));    // 'is'
-
+console.log(str.slice(0, 5)); // 'this '
+console.log(str.substring(2, 4)); // 'is'
 
 // Trim Spaces
 
 console.log(str.trim());
-console.log(str.repeat(2))
+console.log(str.repeat(2));
 ```
 
 ## Date
-
-* 
 
 ```js
 // Create a new Date object
@@ -322,25 +314,24 @@ let now = new Date();
 
 // Getting date details
 
-console.log(now);                // 2022-06-04T10:05:28.496Z
-console.log(now.getDate());      // Day (from 1 to 31)
-console.log(now.getMonth());     // Month (starting from 0 to 11)
-console.log(now.getFullYear());  // Year (2022)
+console.log(now); // 2022-06-04T10:05:28.496Z
+console.log(now.getDate()); // Day (from 1 to 31)
+console.log(now.getMonth()); // Month (starting from 0 to 11)
+console.log(now.getFullYear()); // Year (2022)
 
-console.log(now.getHours());     // Hours
-console.log(now.getMinutes());   // Minutes
-console.log(now.getSeconds());   // Seconds
-
+console.log(now.getHours()); // Hours
+console.log(now.getMinutes()); // Minutes
+console.log(now.getSeconds()); // Seconds
 
 // Setting Date Details
 
-now.setDate(13);        // Day (from 1 to 31)
-now.setMonth(10);       // Month (starting from 0 to 11)
-now.setFullYear(2049);  // Year (2022)
+now.setDate(13); // Day (from 1 to 31)
+now.setMonth(10); // Month (starting from 0 to 11)
+now.setFullYear(2049); // Year (2022)
 
-now.setHours(2);     // Hours
-now.setMinutes(0);   // Minutes
-now.setSeconds(0);   // Seconds
+now.setHours(2); // Hours
+now.setMinutes(0); // Minutes
+now.setSeconds(0); // Seconds
 
 // Creating a date from constructor
 let year = 2049;
