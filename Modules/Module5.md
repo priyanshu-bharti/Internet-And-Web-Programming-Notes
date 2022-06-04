@@ -154,11 +154,11 @@ $str = "ThisisaString"; // Declaring a String
 
 // Length
 strlen($str); // Returns the length of the string
-str_word_count($str) // Returns the number of words in a string
+str_word_count($str); // Returns the number of words in a string
 
 
 // Finding something
-strpos($str, "SubString") // Returns the position of the substring else returns false
+strpos($str, "SubString"); // Returns the position of the substring else returns false
 substr($a, 8, 5); // From $a, starting at position 8, extract 5 characters.
 
 
