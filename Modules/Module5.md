@@ -9,10 +9,10 @@
 - [x] ~~PHP Conditionals~~
 - [x] ~~PHP Strings~~
 - [x] ~~PHP Arrays~~
-- [ ] Cookies
-- [ ] Sessions
-- [ ] Functions
-- [ ] Math Functions
+- [x] ~~Cookies~~
+- [x] ~~Sessions~~
+- [x] ~~Functions~~
+- [x] ~~Math Functions~~
 
 ## PHP Introduction
 
@@ -228,12 +228,17 @@ function doubleNumber(item) {
 
 
 // Creating Associative array
-
-
-// Multi-dimensional Associative array
-
+$asso_arr = array(
+    "team" => "a",
+    "brand" => "x",
+    "members" => array(
+        "mens" => array("Finn", "Seth", "Cody"),
+        "womens" => array("Alexa", "Becky", "Mandy")
+      )
+  );
 
 // Accessing Items in Multi-dimensional Associative array
+echo $asso_arr['members']['mens'][2];
 
 ```
 
@@ -244,13 +249,21 @@ function doubleNumber(item) {
 - Created at the server side and saved to client's browser.
 - Cookie is created at server side and saved to client browser.
 - Each time when client sends request to the server, cookie is embedded with request.
+- General working of the cookies looks something like:
+
+1. Make a request to the server.
+2. Server returns the response and sends cookie along with it.
+3. Subsequent requests from the client contains the cookie and sent to the server.
 
 ```php
 // Creating Cookies
+setCookie("name", "value", time() + 3600); // Set cookie with HTTP Response, and set to expire after 3600 seconds
 
 // Using Cookies
+echo $_COOKIE["name"]; // This will give you the access to the cookie's value.
 
 // Deleting Cookies
+setCookie("name", "value", time() - 3600); // Setting expiry in past will delete the cookie.
 
 ```
 
@@ -263,42 +276,51 @@ function doubleNumber(item) {
 
 ```php
 // Starting a new Session
+session_start();
 
 // Storing information in the Session.
+$_SESSION['user'] = $username;
+
+// Removing information from the session
+unset($_SESSION['user']);
+
+// Retrieving Information
+echo $_SESSION['user'];
 
 // Destroying Session.
+session_destroy();
+
+// Session Methods
+session_id($id) // Get and/or set the current session id
+session_unset() // Free all the session data.
+session_name($name) // Get and/or set the current session name
+session_status() // Returns the current status of the session.
 
 ```
 
 ## Functions
+
 - In this example, `...$args` is an array of arguments.
 - $args can contain any number of arguments
 
 ```php
 function myFunction(...$args) {
-  // Statements
+  for ($args as $values) {
+    // echo $values;
+  }
 }
 ```
 
 ## Math Functions
 
 ```php
-// abs()
-
-// ceil()
-
-// floor()
-
-// sqrt()
-
-// decbin()
-
-// dechex()
-
-// decoct()
-
-// bindec()
-
-// base_convert()
-
+abs($num) // Returns absolute value of a number
+ceil($float) // Returns the next integer close to the decimal value.
+floor($float) // Returns the previous integer close to the decimal value.
+sqrt($num) // Returns the square root of the number
+decbin($num) // Converts a number to binary
+dechex($num) // Converts a number to hexadecimal
+decoct($num) // Converts a number to octal
+bindec($num) // Converts binary to decimal
+base_convert($num, $fromBase, $toBase); // Converts a number to a specified base
 ```
