@@ -1,19 +1,19 @@
 # Internet and Web Programming (ITA6003)
 ## Module 1 : Basics of Internet
-- [x] Internet working
-- [x] How HTTP Works
-- [x] IPv4 Header
-- [x] IPv6 Address
-- [x] Web Clients 
-- [x] Web Servers
-- [x] Basic Internet Protocols
-- [x] How API Works
-- [x] Domains
-- [x] URIs and URLs
-- [x] Applications of Internet
-- [x] Types of Networks
-- [x] Web Browser
-- [x] Web Caching
+- [x] ~~Internet working~~
+- [x] ~~How HTTP Works~~
+- [x] ~~IPv4 Header~~
+- [x] ~~IPv6 Address~~
+- [x] ~~Web Clients~~
+- [x] ~~Web Servers~~
+- [x] ~~Basic Internet Protocols~~
+- [x] ~~How API Works~~
+- [x] ~~Domains~~
+- [x] ~~URIs and URLs~~
+- [x] ~~Applications of Internet~~
+- [x] ~~Types of Networks~~
+- [x] ~~Web Browser~~
+- [x] ~~Web Caching~~
 
 ## Internet
 * The Internet is not the same as the Web. 

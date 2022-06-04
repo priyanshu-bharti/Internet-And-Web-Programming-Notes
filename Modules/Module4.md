@@ -1,15 +1,17 @@
 # Internet and Web Programming (ITA6003)
 
-- [x] Browser Object Model
-- [x] Window Object
-- [x] open()
-- [x] setTimeout()
-- [x] History Object
-- [x] Navigator Object
-- [x] Screen Object
-- [x] Document Object Model
-- [x] Document Object Model Methods
-- [x] Form Validation
+## Module 4 : Advanced Javascript and DOM manipulation
+
+- [x] ~~Browser Object Model~~
+- [x] ~~Window Object~~
+- [x] ~~open()~~
+- [x] ~~setTimeout()~~
+- [x] ~~History Object~~
+- [x] ~~Navigator Object~~
+- [x] ~~Screen Object~~
+- [x] ~~Document Object Model~~
+- [x] ~~Document Object Model Methods~~
+- [x] ~~Form Validation~~
 
 ## Browser Object Model
 

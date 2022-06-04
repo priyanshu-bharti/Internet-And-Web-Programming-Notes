@@ -1,22 +1,24 @@
 # Internet and Web Programming (ITA6003)
 
-- [x] Introduction to JS
-- [x] Features of JavaScript
-- [x] Applications of JavaScript
-- [x] Variables
-- [x] Data Types
-- [x] Operators
-- [x] If else
-- [x] Switch
-- [x] Loops
-- [x] Functions
-- [x] Objects
-- [x] Arrays
-- [x] Array Methods
-- [x] Strings
-- [x] Strings Methods
-- [x] Date
-- [x] Date Methods
+## Module 3 : Basics of Javascript
+
+- [x] ~~Introduction to JS~~
+- [x] ~~Features of JavaScript~~
+- [x] ~~Applications of JavaScript~~
+- [x] ~~Variables~~
+- [x] ~~Data Types~~
+- [x] ~~Operators~~
+- [x] ~~If else~~
+- [x] ~~Switch~~
+- [x] ~~Loops~~
+- [x] ~~Functions~~
+- [x] ~~Objects~~
+- [x] ~~Arrays~~
+- [x] ~~Array Methods~~
+- [x] ~~Strings~~
+- [x] ~~Strings Methods~~
+- [x] ~~Date~~
+- [x] ~~Date Methods~~
 
 ## Introduction to JS
 
