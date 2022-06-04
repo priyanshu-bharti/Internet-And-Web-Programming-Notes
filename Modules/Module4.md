@@ -8,8 +8,8 @@
 - [x] Navigator Object
 - [x] Screen Object
 - [x] Document Object Model
-- [ ] Document Object Model Methods
-- [ ] Form Validation
+- [x] Document Object Model Methods
+- [x] Form Validation
 
 ## Browser Object Model
 
@@ -75,12 +75,13 @@ setTimeout(function () {
   console.log("This is after 3 sec");
 }, 3000);
 
-
 // Open
 open("https://www.google.co.in");
 ```
 
 ## Document Object Model
+
+- When we get an element using tagname or class, it will give us an array of elements, so if you want to change the innner text or html, use the subscript to get the right element and change it.
 
 ```js
 // Write
@@ -93,20 +94,70 @@ document.writeln("This is written by js in a new line");
 let emailText = document.getElementById("emailText");
 
 // Get element by class name
-let spinner = document.getElementByClassName("spinner");
+let spinner = document.getElementsByClassName("spinner");
 
 // Get element by tag name
-let span = document.getElementByTagName("span");
+let span = document.getElementsByTagName("span");
 
 // Inner Text
-
+let thing = document.getElementsByClassName("thing");
+thing[0].innerText = "This is it!";
 
 // Inner HTML
+let thing = document.getElementsByClassName("thing");
+thing[0].innerHTML = "This is it!";
 
 // Classlist toggle
+const toggle = () => thing.classList.toggle("hidden");
 
 // Get input value
-
+let inputText = document.getElementById("input").value;
 ```
 
 ## Form Validation
+
+### HTML Form
+
+```html
+Name : <input required type="text" id="name" /> <br />
+
+Email : <input required type="email" id="email" /> <br />
+
+Password : <input required type="password" id="password" /> <br />
+
+Confirm Password : <input required type="password" id="repassword" /> <br />
+
+Age : <input required type="number" id="age" /> <br />
+
+Gender :
+<fieldset id="group">
+  Male
+  <input checked name="age" value="male" class="gender" type="radio" /> Female
+  <input name="age" value="female" class="gender" type="radio" />
+</fieldset>
+<br />
+
+<button onclick="validate()">Validate!</button>
+```
+
+### Javascript Validation
+
+```js
+function validate() {
+  // Declare objects
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let repassword = document.getElementById("repassword").value;
+  let age = document.getElementById("age").value;
+
+  // Validate using Regex
+  name = /^[a-zA-Z ]*$/.test(name) ? true : false;
+  email = /[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}/.test(email) ? true : false;
+  repassword = password == repassword ? true : false;
+  password = /[a-zA-Z0-9@#$%!_\-.]{8,}/.test(password) ? true : false;
+  age = age > 18 && age < 100 ? true : false;
+
+  alert(name && email && password && repassword && age ? "Valid" : "Invalid");
+}
+```

@@ -135,9 +135,9 @@
     <option value="internalValue">Option Text to show</option>
   </select>
     <fieldset id="group">
-        <input type="radio" value="">
-        <input type="radio" value="">
-        <input type="radio" value="">
+        <input type="radio" name="commonName">
+        <input type="radio" name="commonName">
+        <input type="radio" name="commonName">
     </fieldset>
   <label for="c1">Checkbox</label>
 	<input type="checkbox" checked required id="c1"></input>

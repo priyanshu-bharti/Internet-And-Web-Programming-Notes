@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  Name : <input required type="text" id="name" /> <br />
+  Email : <input required type="email" id="email" /> <br />
+  Password : <input required type="password" id="password" /> <br />
+  Confirm Password : <input required type="password" id="repassword" /> <br />
+  Age : <input required type="number" id="age" /> <br />
+  Gender :
+  <fieldset id="group">
+    Male <input checked name="age" value="male" class="gender" type="radio" />
+    Female <input name="age" value="female" class="gender" type="radio" />
+  </fieldset> <br />
+  <button onclick="validate()">Validate!</button>
+
+  <script>
+    // Declare the objects
+    function validate() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let repassword = document.getElementById("repassword").value;
+      let age = document.getElementById("age").value;
+
+      console.log(name, email, password, repassword, age);
+
+      name = /^[a-zA-Z ]*$/.test(name) ? true : false;
+      email = /[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}/.test(email) ? true : false;
+      repassword = password == repassword ? true : false;
+      password = /[a-zA-Z0-9@#$%!_\-.]{8,}/.test(password) ? true : false;
+      age = age > 18 && age < 100 ? true : false;
+
+      alert((name && email && password && repassword && age) ? "Valid" : "Invalid");
+    }
+  </script>
+</body>
+
+</html>
