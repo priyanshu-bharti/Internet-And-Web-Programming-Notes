@@ -131,9 +131,8 @@ Age : <input required type="number" id="age" /> <br />
 
 Gender :
 <fieldset id="group">
-  Male
-  <input checked name="age" value="male" class="gender" type="radio" /> Female
-  <input name="age" value="female" class="gender" type="radio" />
+  Male <input checked name="age" value="male" class="gender" type="radio" /> 
+  Female <input name="age" value="female" class="gender" type="radio" />
 </fieldset>
 <br />
 
