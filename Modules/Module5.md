@@ -314,13 +314,13 @@ function myFunction(...$args) {
 ## Math Functions
 
 ```php
-abs($num) // Returns absolute value of a number
-ceil($float) // Returns the next integer close to the decimal value.
-floor($float) // Returns the previous integer close to the decimal value.
-sqrt($num) // Returns the square root of the number
-decbin($num) // Converts a number to binary
-dechex($num) // Converts a number to hexadecimal
-decoct($num) // Converts a number to octal
-bindec($num) // Converts binary to decimal
+abs($num); // Returns absolute value of a number
+ceil($float); // Returns the next integer close to the decimal value.
+floor($float); // Returns the previous integer close to the decimal value.
+sqrt($num); // Returns the square root of the number
+decbin($num); // Converts a number to binary
+dechex($num); // Converts a number to hexadecimal
+decoct($num); // Converts a number to octal
+bindec($num); // Converts binary to decimal
 base_convert($num, $fromBase, $toBase); // Converts a number to a specified base
 ```
