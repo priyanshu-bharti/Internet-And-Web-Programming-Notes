@@ -209,3 +209,189 @@ $res = $res->fetch_assoc();
 echo "<br>name : " . $res["name"] . "<br>email : " . $res["email"] . "<br>password : " . $res["password"];
 ?>
 ```
+
+## Login and Signup using PHP
+
+### connection.php
+
+```php
+<?php
+
+// Connection Details
+$hostname = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'test';
+
+// Make a connection
+$conn = mysqli_connect($hostname, $username, $password, $database);
+
+?>
+```
+
+### register.html
+
+```html
+<html lang="en">
+  <head>
+    <title>Register</title>
+  </head>
+
+  <body>
+    <form action="register.php" method="POST">
+      Name: <input required type="text" name="name" id="name" /> <br /><br />
+      Email: <input required type="email" name="email" id="email" />
+      <br /><br />
+      Password:
+      <input required type="password" name="password" id="password" />
+      <br /><br />
+      Re-enter Password:
+      <input required type="password" name="repass" id="repass" /> <br /><br />
+      <input type="submit" name="submit" value="Register" />
+    </form>
+  </body>
+</html>
+```
+
+### register.php
+
+```php
+<?php
+
+// Import the connection
+require "connection.php";
+
+// Get the information from the user
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $pass = $_POST['pass'];
+
+  // Check if the user is already registered
+  $query = "SELECT * FROM `test` WHERE `email` = '$email'"; // Prepare the query
+  $res = mysqli_query($conn, $query); // Execute the query
+
+  // Check if no rows are returned
+  if ($res->num_rows == 0) {
+    // Add the user to the database
+    $query = "INSERT INTO `test` (`name`, `email`, `password`) VALUES ('$name', '$email', '$pass')";
+    // Execute the query
+    $res = mysqli_query($conn, $query);
+
+    if ($res) {
+      echo "Successfully Registered";
+    } else {
+      echo "Error Occurred";
+    }
+  } else {
+    echo "This email already exists";
+  }
+
+  // Log in the user
+  // Start the session
+  session_start();
+  // Set the login session as user's name
+  $_SESSION['login'] = $name;
+  // Redirect
+  header("Location: ./home.php");
+}
+?>
+```
+
+### login.html
+
+```html
+<html lang="en">
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <form action="login.php" method="POST">
+      Email: <input required type="email" name="email" id="email" />
+      <br /><br />
+      Password:
+      <input required type="password" name="password" id="password" />
+      <br /><br />
+      <input type="submit" name="submit" value="Login" />
+    </form>
+  </body>
+</html>
+```
+
+### login.php
+
+```php
+<?php
+
+// Create the connection
+require "connection.php";
+
+// Get the credentials from the user
+if (isset($_POST['submit'])) {
+  $email = $_POST['email'];
+  $pass = $_POST['pass'];
+
+  // Match the credentials and retrieve the name
+  $query = "SELECT `name` FROM `test` WHERE `email` = '$email' AND `pass` = '$pass'";
+
+  // Execute the query
+  $res = mysqli_query($conn, $query);
+
+  // Check if no users are found
+  if ($res->num_rows == 0) {
+    echo "<script>alert('Invalid Credentials')</script>";
+  } else {
+    // Get the name of the user from the rows returned.
+    $name = $res->fetch_assoc['name'];
+    
+    // Log in the user if no one is logged in.
+    if (!isset($_SESSION['login'])) {
+      // Start the session
+      session_start();
+      // Set the login session as user's name
+      $_SESSION['login'] = $name;
+      // Redirect
+      header("Location: ./home.php");
+    }
+  }
+} else {
+  echo "Please login first";
+}
+?>
+```
+
+### home.PHP
+
+```php
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <?php
+  session_start();
+  echo $_SESSION['login'];
+  ?>
+
+  <br>
+  
+  <form action="home.php" method="POST">
+    <input type="submit" value="Logout" name="logout">
+  </form>
+
+  <?php
+  // Check if the user has pressed the logout button
+  if (isset($_POST['logout'])) {
+    // Show an alert
+    echo "<script>alert('Successfully Logged Out!')</script>";
+    // Remove the login information
+    unset($_SESSION['login']);
+    // Destroy the session
+    session_destroy();
+    header('Location: ./login.html');
+  }
+  ?>
+</body>
+</html>
+
+```
