@@ -302,9 +302,10 @@ session_status(); // Returns the current status of the session.
 
 - In this example, `...$args` is an array of arguments.
 - $args can contain any number of arguments
+- `$var` is a default argument values.
 
 ```php
-function myFunction(...$args) {
+function myFunction($var="Value", ...$args) {
   for ($args as $values) {
     // echo $values;
   }
