@@ -220,6 +220,7 @@ array_search('value', $arr); // Returns the index if the value is present else f
 array_map('doubleNumber', $arr); // Apply the function 'doubleNumber' the $arr.
 array_slice ($arr, $pos, $count); // Extract count number of elements starting from position pos in array arr.
 array_reverse($arr); // Returns the reverse of array.
+sort($arr); // Sorts the array in ascending order.
 
 
 // Helper function
