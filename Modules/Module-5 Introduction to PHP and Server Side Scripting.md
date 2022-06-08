@@ -196,7 +196,7 @@ $numbers[2] = "three";
 // Checking array
 is_array($arr); // Returns true if $arr is an array.
 sizeof($arr); // Returns the number of elements in the array.
-
+count($arr); // Counts the number of items in array.
 
 // Adding or Removing Elements
 array_merge($arr1, $arr2); // Merges the arrays
