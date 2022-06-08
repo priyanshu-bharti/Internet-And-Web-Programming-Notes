@@ -68,6 +68,7 @@ navigator.platform; // Operating system and Platform
 
 - Set Timeout Allows us to execute some code after time specified.
 - Open allows us to open some url in a new tab
+- Set Interval allows us to repeatedly do something after a fixed interval of time.
 
 ```js
 // Set Timeout
@@ -76,6 +77,14 @@ console.log("This prints immediately");
 setTimeout(function () {
   console.log("This is after 3 sec");
 }, 3000);
+
+// Set Interval
+console.log("This prints immediately");
+
+setInterval(function () {
+  console.log("This gets printed every 1 sec");
+}, 1000);
+
 
 // Open
 open("https://www.google.co.in");
