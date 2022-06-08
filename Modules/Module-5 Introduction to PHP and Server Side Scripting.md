@@ -195,6 +195,7 @@ $numbers[2] = "three";
 
 // Checking array
 is_array($arr); // Returns true if $arr is an array.
+sizeof($arr); // Returns the number of elements in the array.
 
 
 // Adding or Removing Elements
