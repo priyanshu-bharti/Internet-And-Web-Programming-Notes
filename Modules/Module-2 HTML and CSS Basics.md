@@ -397,4 +397,12 @@ div {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* Table Stylings */
+table, th, td {
+  border: 1px solid black;
+  border-spacing: 2px;
+  border-style: "solid|dashed|dotted|double|groove|inset|outset|none|hidden";
+  border-collapse: "collapse|separate";
++
 ```
