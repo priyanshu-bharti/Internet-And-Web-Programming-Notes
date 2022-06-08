@@ -404,5 +404,5 @@ table, th, td {
   border-spacing: 2px;
   border-style: "solid|dashed|dotted|double|groove|inset|outset|none|hidden";
   border-collapse: "collapse|separate";
-+
+}
 ```
