@@ -202,14 +202,13 @@
 - `noframes`: would only display the text if the browser doesn’t support frames.
 
 ## Tables
-
 ```html
 <table>
   <caption>
     Some Caption
   </caption>
   <tr>
-    <th>Heading</th>
+    <th rowspan="2" colspan="2">Heading</th>
     <th>Heading</th>
   </tr>
   <tr>
