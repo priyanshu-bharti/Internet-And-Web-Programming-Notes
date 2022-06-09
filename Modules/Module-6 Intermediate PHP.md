@@ -309,3 +309,26 @@ echo date("h:i:s a"); // 03:45:32 pm
 echo date("d/m/Y"); // 01/06/1999
 echo date("F, l the jS, Y"); // November, Friday the 13th, 2022
 ```
+
+### Creating Date and Time
+
+```php
+// Create a date using mktime()
+mktime(hour, minute, second, month, day, year);
+
+// Get an object
+$d=mktime(11, 14, 54, 8, 12, 2014); // 11:14:54(am) 12/08/2014
+
+// Creating date object using strings
+$d=strtotime("10:30pm April 15 2014"); // Same format as the mktime parameters.
+$d=strtotime("tomorrow");
+$d=strtotime("next Saturday");
+$d=strtotime("+3 Months");
+
+// Counting the number of days left till we reach a certain date.
+$certain_date = "1 June";
+$d1=strtotime($certain_date);
+$d2=ceil(($d1-time())/60/60/24);
+echo "There are " . $d2 ." days until ". $certain_date;
+
+```
